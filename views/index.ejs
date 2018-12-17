@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WHS Node App</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>2018 Wrangler Poll</h1>
+    <img src="WHS.png" alt="WHS logo" height="88" width="88">
+    <p>How often have you seen someone vaping on campus?</p>
+  <form method="post" action="/item/add">
+    <label for="name">Name</label>
+    <input type="text" name="name">
+    <input type="submit" value="Add">
+  </form>
+  <h4>Location(example: G Building):</h4>
+  <ul>
+    <% items.forEach(function(item) { %>
+      <li>
+        <%= item.name %>
+      </li>
+      <% }); %>
+  </ul>
+  </div>
+</body>
+
+</html>
